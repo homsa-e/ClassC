@@ -1,0 +1,10 @@
+#include "c.h"
+
+int main(){
+    C *object_1 = new C();
+    C *object_2 = new C();
+    *object_1 = *object_2;
+    *object_1 = std::move(*object_2);
+    delete object_2;
+    delete object_1;
+}
